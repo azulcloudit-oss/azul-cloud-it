@@ -191,7 +191,7 @@ export default function QuoteForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
+          access_key: 'edf66b1b-d416-4630-b2bf-ec3dec870d1c',
           subject: `New MSP quote request — ${form.company || form.name}`,
           from_name: 'Azul Cloud IT Website',
           ...form,

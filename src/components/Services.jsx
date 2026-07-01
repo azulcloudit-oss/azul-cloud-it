@@ -170,7 +170,7 @@ function CheckIcon() {
 
 export default function Services() {
   return (
-    <section id="services" style={styles.section}>
+    <section id="services" style={styles.section} className="section-pad">
       <div style={styles.inner}>
         <div style={styles.header}>
           <p style={styles.label}>What we do</p>

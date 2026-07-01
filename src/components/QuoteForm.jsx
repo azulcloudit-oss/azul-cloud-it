@@ -191,7 +191,7 @@ export default function QuoteForm() {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          access_key: 'edf66b1b-d416-4630-b2bf-ec3dec870d1c',
+          access_key: 'YOUR_WEB3FORMS_ACCESS_KEY',
           subject: `New MSP quote request — ${form.company || form.name}`,
           from_name: 'Azul Cloud IT Website',
           ...form,
@@ -229,7 +229,7 @@ export default function QuoteForm() {
           </p>
         </div>
 
-        <div style={styles.card}>
+        <div style={styles.card} className="quote-card">
           {status === 'success' ? (
             <div style={styles.success}>
               <div style={styles.successIcon}>
@@ -245,7 +245,7 @@ export default function QuoteForm() {
             </div>
           ) : (
             <form onSubmit={handleSubmit}>
-              <div style={styles.row}>
+              <div style={styles.row} className="form-row">
                 <div style={styles.field}>
                   <label style={styles.fieldLabel}>Your name *</label>
                   <input
@@ -271,7 +271,7 @@ export default function QuoteForm() {
                 </div>
               </div>
 
-              <div style={styles.row}>
+              <div style={styles.row} className="form-row">
                 <div style={styles.field}>
                   <label style={styles.fieldLabel}>Email address *</label>
                   <input
@@ -298,7 +298,7 @@ export default function QuoteForm() {
                 </div>
               </div>
 
-              <div style={styles.row}>
+              <div style={styles.row} className="form-row">
                 <div style={styles.field}>
                   <label style={styles.fieldLabel}>Service needed *</label>
                   <select

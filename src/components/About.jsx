@@ -121,23 +121,25 @@ const styles = {
     textAlign: 'left',
   },
   cert: {
-    display: 'flex',
-    alignItems: 'center',
-    gap: '8px',
-    fontSize: '13px',
-    color: '#1E40AF',
-    background: 'rgba(255,255,255,0.6)',
+    background: 'rgba(255,255,255,0.7)',
     border: '1px solid #BFDBFE',
-    borderRadius: '8px',
-    padding: '7px 12px',
-    fontWeight: 500,
+    borderRadius: '10px',
+    padding: '10px 14px',
+    display: 'flex',
+    flexDirection: 'column',
+    gap: '2px',
   },
-  certDot: {
-    width: '6px',
-    height: '6px',
-    borderRadius: '50%',
-    background: '#3B82F6',
-    flexShrink: 0,
+  certIssuer: {
+    fontSize: '10px',
+    fontWeight: 700,
+    letterSpacing: '0.08em',
+    textTransform: 'uppercase',
+  },
+  certName: {
+    fontSize: '13px',
+    color: '#1E3A8A',
+    fontWeight: 600,
+    lineHeight: 1.3,
   },
   founderBio: {},
   bioLabel: {
@@ -223,11 +225,11 @@ const mission = [
 ]
 
 const certs = [
-  'Azure Solutions Architect Expert',
-  'Azure Administrator Associate',
-  'Windows Server Hybrid Admin Associate',
-  'AWS Cloud Practitioner',
-  'CompTIA Security+ / Network+ / Server+',
+  { name: 'Azure Solutions Architect Expert', issuer: 'Microsoft', color: '#0078D4' },
+  { name: 'Azure Administrator Associate', issuer: 'Microsoft', color: '#0078D4' },
+  { name: 'Windows Server Hybrid Admin Associate', issuer: 'Microsoft', color: '#0078D4' },
+  { name: 'AWS Cloud Practitioner', issuer: 'Amazon Web Services', color: '#FF9900' },
+  { name: 'Security+ / Network+ / Server+ / A+', issuer: 'CompTIA', color: '#C8202F' },
 ]
 
 const highlights = [
@@ -250,7 +252,7 @@ function CheckIcon() {
 
 export default function About() {
   return (
-    <section id="about" style={styles.section}>
+    <section id="about" style={styles.section} className="section-pad">
       <div style={styles.inner}>
 
         <div style={styles.header}>
@@ -262,7 +264,7 @@ export default function About() {
           </p>
         </div>
 
-        <div style={styles.missionGrid}>
+        <div style={styles.missionGrid} className="mission-grid">
           {mission.map(m => (
             <div key={m.title} style={styles.missionCard}>
               <div style={styles.missionIcon}>{m.icon}</div>
@@ -274,8 +276,8 @@ export default function About() {
 
         <div style={styles.divider} />
 
-        <div style={styles.founderLayout}>
-          <div style={styles.founderCard}>
+        <div style={styles.founderLayout} className="founder-layout">
+          <div style={styles.founderCard} className="founder-card-center">
             <div style={styles.avatar}>
               <img src="/anthony-fabian.jpg" alt="Anthony Fabian, CEO of Azul Cloud IT" style={styles.avatarImg} />
             </div>
@@ -283,9 +285,9 @@ export default function About() {
             <div style={styles.founderTitle}>CEO & Founder</div>
             <div style={styles.certGrid}>
               {certs.map(c => (
-                <div key={c} style={styles.cert}>
-                  <div style={styles.certDot} />
-                  {c}
+                <div key={c.name} style={styles.cert}>
+                  <span style={{ ...styles.certIssuer, color: c.color }}>{c.issuer}</span>
+                  <span style={styles.certName}>{c.name}</span>
                 </div>
               ))}
             </div>
@@ -314,7 +316,7 @@ export default function About() {
               who designed it.
             </p>
 
-            <div style={styles.highlights}>
+            <div style={styles.highlights} className="highlights-grid">
               {highlights.map(h => (
                 <div key={h.text} style={styles.highlight}>
                   <CheckIcon />

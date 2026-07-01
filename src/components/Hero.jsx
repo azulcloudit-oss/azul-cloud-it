@@ -133,7 +133,7 @@ export default function Hero() {
   }
 
   return (
-    <section style={styles.section}>
+    <section style={styles.section} className="hero-pad">
       <div style={styles.grid} />
       <div style={styles.inner}>
         <div style={styles.eyebrow}>
@@ -173,7 +173,7 @@ export default function Hero() {
           </button>
         </div>
 
-        <div style={styles.badges}>
+        <div style={styles.badges} className="badges-row">
           {checks.map(text => (
             <div key={text} style={styles.badge}>
               <svg style={styles.badgeIcon} viewBox="0 0 20 20" fill="none">

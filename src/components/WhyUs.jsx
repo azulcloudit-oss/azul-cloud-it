@@ -147,9 +147,9 @@ const reasons = [
 
 export default function WhyUs() {
   return (
-    <section id="why-us" style={styles.section}>
+    <section id="why-us" style={styles.section} className="section-pad">
       <div style={styles.inner}>
-        <div style={styles.layout}>
+        <div style={styles.layout} className="two-col-layout">
           <div>
             <p style={styles.label}>Why Azul Cloud IT</p>
             <h2 style={styles.h2}>Built by engineers,<br />for engineers.</h2>
@@ -158,7 +158,7 @@ export default function WhyUs() {
               infrastructure and cloud engineers who have operated large-scale Azure environments.
               That experience comes standard with every engagement.
             </p>
-            <div style={styles.statsGrid}>
+            <div style={styles.statsGrid} className="stats-grid">
               {stats.map(s => (
                 <div key={s.label} style={styles.stat}>
                   <div style={styles.statNum}>{s.num}</div>

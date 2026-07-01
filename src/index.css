@@ -62,3 +62,17 @@ input, textarea, select {
   font-family: var(--font-body);
   font-size: 15px;
 }
+
+@media (max-width: 680px) {
+  .two-col-layout { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .founder-layout { grid-template-columns: 1fr !important; gap: 36px !important; }
+  .form-row { grid-template-columns: 1fr !important; }
+  .stats-grid { grid-template-columns: 1fr 1fr !important; }
+  .highlights-grid { grid-template-columns: 1fr !important; }
+  .section-pad { padding: 64px 20px !important; }
+  .hero-pad { padding-top: 108px !important; padding-bottom: 64px !important; padding-left: 20px !important; padding-right: 20px !important; }
+  .badges-row { flex-direction: column !important; align-items: flex-start !important; gap: 12px !important; }
+  .quote-card { padding: 24px 18px !important; }
+  .founder-card-center { max-width: 320px !important; margin: 0 auto !important; }
+  .mission-grid { grid-template-columns: 1fr !important; }
+}

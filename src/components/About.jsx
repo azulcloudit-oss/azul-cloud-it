@@ -233,7 +233,7 @@ const certs = [
 ]
 
 const highlights = [
-  { text: '7+ years in enterprise IT and cloud infrastructure' },
+  { text: '10+ years in enterprise IT and cloud infrastructure' },
   { text: 'Microsoft Enterprise Partner collaboration' },
   { text: 'Multi-subscription Azure estate management' },
   { text: 'NIST, CMMC, PCI-DSS, HIPAA frameworks' },
@@ -297,7 +297,7 @@ export default function About() {
             <p style={styles.bioLabel}>Meet the founder</p>
             <h3 style={styles.bioH3}>Senior engineer.<br />Cloud architect.<br />Your direct point of contact.</h3>
             <p style={styles.bioBody}>
-              Anthony Fabian is a Microsoft-certified Azure Solutions Architect Expert with 7+ years
+              Anthony Fabian is a Microsoft-certified Azure Solutions Architect Expert with 10+ years
               in IT and a deep focus on cloud architecture, infrastructure-as-code, automation, and
               security. He founded Azul Cloud IT to bring enterprise-level Azure expertise directly
               to growing businesses — without the layers of overhead that come with large MSPs.

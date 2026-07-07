@@ -205,7 +205,7 @@ export default function QuoteForm() {
       }
     } catch (err) {
       setStatus('error')
-      setErrorMsg('Something went wrong. Please email us directly at hello@azulcloudit.com')
+      setErrorMsg('Something went wrong. Please email us directly at anthony@azulcloudit.com')
     }
   }
 
